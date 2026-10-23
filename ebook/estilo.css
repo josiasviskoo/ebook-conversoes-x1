@@ -1,0 +1,331 @@
+/* Método X1 — Vendas no 1 a 1 · Identidade Viskoo
+   Preto predominante, detalhes em laranja #F58220. */
+
+:root {
+  --preto: #0D0D0D;
+  --preto-2: #1A1A1A;
+  --grafite: #2B2B2B;
+  --cinza: #6B6B6B;
+  --linha: #E4E1DA;
+  --papel: #FFFFFF;
+  --laranja: #F58220;
+  --laranja-claro: #FEF1E4;
+  --vermelho: #D64545;
+  --vermelho-claro: #FCEDED;
+  --verde: #1F9D55;
+  --verde-claro: #E8F6EE;
+  --wa-fundo: #EFE7DD;
+  --wa-out: #DCF8C6;
+  --wa-topo: #1F2C34;
+}
+
+@page {
+  size: A4;
+  margin: 20mm 19mm 22mm 19mm;
+  @top-right {
+    content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNCIgaGVpZ2h0PSIzNCIgdmlld0JveD0iMCAwIDQwNCA0MDMiIGZpbGw9Im5vbmUiPjxwYXRoIGQ9Ik0zNzkuNzQzIDU4LjgxNDRMMjQ2LjkwNCA1OC44MTk1TDI4OC4xMjYgMTMxLjMyNkwzMTIuMzYzIDEzMS4zMjVDMzM3Ljg4NiAxMzEuMzA5IDM2MS40NTEgMTE3LjY1OSAzNzQuMiA5NS41MTExTDM4Ny41NDggNzIuMjUxNEMzOTAuOTc1IDY2LjI2NiAzODYuNjU1IDU4LjgwMDMgMzc5Ljc0MyA1OC44MTQ0WiIgZmlsbD0iI0Y1ODIyMCI+PC9wYXRoPjxwYXRoIGQ9Ik0xOTQuMzc1IDI2My4zNDNMMTU0Ljk4MiAxOTQuNzYxQzEzOS41MDYgMTY3LjgwNyAxMTAuODQgMTUxLjE3NSA3OS43NTU5IDE1MS4yNDFMNDYuNTQwNyAxNTEuMjMzTDE4Ni41MzggMzk1LjE5N0MxOTAuMDYzIDQwMS4xODkgMTk4LjY3NiA0MDEuMTUxIDIwMi4xNTEgMzk1LjEyMkwzMTUuODMzIDE5Ny4yMTJMMjc0LjM4NiAxMjQuMzMzTDE5NC4zNzUgMjYzLjM0M1oiIGZpbGw9IiNGNTgyMjAiPjwvcGF0aD48cGF0aCBkPSJNMTk0LjMzMSAyNjMuMzUzTDIyNy43MzIgMzIyLjQ4MUMyMzEuMjI4IDMyOC43NTcgMjQwLjI2NiAzMjguNzQ0IDI0My44ODYgMzIyLjQ5OUwzMDguMzE0IDIxMC4xOTZMMzE1Ljc3MSAxOTcuMTcxTDI3NC40MTQgMTI0LjM0TDE5NC4zMzEgMjYzLjM1M1oiIGZpbGw9IiNGNTgyMjAiPjwvcGF0aD48cGF0aCBkPSJNOC45ODM1OCA1OC43OTAyQzIuMDc4MzQgNTguNzkwMiAtMi4yMzc0MyA2Ni4yOTk2IDEuMjE1MTkgNzIuMjU1NEw5LjMyODg2IDg2LjQxMTFDMjUuMjEwOSAxMTQuMjA1IDU0LjgxNzEgMTMxLjI5NSA4Ni44NDAyIDEzMS4yOTVIMTE4LjYwNEwxMTguNTE4IDEzMS4yMDlIMTk0Ljk5NEwyMTcuNjA4IDE3MUMyMjIuMDk3IDE3OC43NjkgMjMzLjMxOCAxNzguODU1IDIzNy44MDYgMTcxLjA4N0wyNjkuNjU3IDExNi4wMTdMMjYzLjI2OSAxMDQuNzk2TDIzNy4yMDIgNTguNzkwMkg4Ljk4MzU4WiIgZmlsbD0iI0Y1ODIyMCI+PC9wYXRoPjxwYXRoIGQ9Ik0xOTUuMDg0IDEzMS4zMjJMMjE3LjYyMyAxNzAuOTg0QzIyMi4wNzEgMTc4LjgxMiAyMzMuMzM0IDE3OC44NTYgMjM3Ljg0OSAxNzEuMDc0TDI2MC44MjUgMTMxLjMyMkwxOTUuMDg0IDEzMS4zMjJaIiBmaWxsPSIjRjU4MjIwIj48L3BhdGg+PC9zdmc+");
+    vertical-align: bottom;
+    text-align: right;
+  }
+  @bottom-left {
+    content: "E-book de Conversões no X1 da Viskoo para empresas que vendem no X1";
+    font: 600 7.5pt "Montserrat", sans-serif;
+    color: #9A9A9A;
+    letter-spacing: .02em;
+    white-space: nowrap;
+  }
+  @bottom-right {
+    content: counter(page);
+    font: 700 9pt "Montserrat", sans-serif;
+    color: var(--laranja);
+  }
+}
+
+@page escuro {
+  margin: 0;
+  @top-right { content: none; }
+  @bottom-left { content: none; }
+  @bottom-right { content: none; }
+}
+
+* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+html { background: var(--papel); }
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 10.3pt;
+  line-height: 1.62;
+  color: var(--preto-2);
+  hyphens: auto;
+  orphans: 3;
+  widows: 3;
+}
+
+/* Ícone e rodapé nas páginas escuras (sem margem de página) */
+.icone-canto {
+  position: absolute; right: 12mm; top: 10mm; width: 11mm; height: 11mm; z-index: 2;
+}
+.rodape-escuro {
+  position: absolute; left: 24mm; right: 24mm; bottom: 9mm; margin: 0; z-index: 2;
+  font: 600 7.5pt "Montserrat", sans-serif; letter-spacing: .02em; color: #8A8A8A;
+}
+
+.pdf-marker { position: absolute; font-size: 1px; color: transparent; line-height: 0; }
+
+/* ---------- Capa, contracapa e aberturas de parte ---------- */
+
+.capa, .contracapa, .parte {
+  page: escuro;
+  break-before: page;
+  break-after: page;
+  position: relative;
+  width: 210mm;
+  height: 296.5mm;
+  overflow: hidden;
+  background: var(--preto);
+  color: #fff;
+}
+.capa { break-before: auto; }
+
+.capa .x-gigante, .parte-x, .contracapa .x-gigante {
+  position: absolute;
+  font: 900 330pt/0.8 "Montserrat", sans-serif;
+  color: rgba(245, 130, 32, .13);
+  letter-spacing: -.06em;
+  user-select: none;
+}
+.capa .x-gigante { right: -38mm; top: 44mm; }
+.contracapa .x-gigante { left: -30mm; bottom: -8mm; color: rgba(245, 130, 32, .07); }
+
+.capa .faixa { position: absolute; left: 0; top: 0; width: 7mm; height: 100%; background: var(--laranja); }
+.capa .conteudo { position: absolute; left: 24mm; right: 24mm; top: 34mm; bottom: 26mm; display: flex; flex-direction: column; }
+.capa .selo {
+  font: 700 8.5pt "Montserrat", sans-serif; letter-spacing: .28em; text-transform: uppercase;
+  color: var(--laranja);
+}
+.capa .metodo {
+  margin-top: 30mm;
+  font: 900 70pt/0.95 "Montserrat", sans-serif;
+  letter-spacing: -.035em;
+}
+.capa .metodo span { color: var(--laranja); }
+.capa .sub-metodo {
+  margin-top: 4mm;
+  font: 600 22pt "Montserrat", sans-serif;
+  color: #EDEDED;
+  letter-spacing: .01em;
+}
+.capa .barra { width: 22mm; height: 2.2mm; background: var(--laranja); margin: 12mm 0 9mm; }
+.capa .descricao { font: 400 13pt/1.5 "Inter", sans-serif; color: #CFCFCF; max-width: 118mm; }
+.capa .rodape { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; }
+.capa .publico { font: 500 9pt/1.5 "Inter", sans-serif; color: #9A9A9A; max-width: 90mm; }
+
+.marca {
+  font: 900 24pt "Montserrat", sans-serif;
+  letter-spacing: -.02em;
+  color: #fff;
+}
+.marca::after { content: "."; color: var(--laranja); }
+.marca img { height: 12mm; }
+
+.parte .parte-x { right: -26mm; bottom: 8mm; color: rgba(245, 130, 32, .10); }
+.parte { padding: 0 24mm; display: flex; flex-direction: column; justify-content: center; }
+.parte::before { content: ""; position: absolute; left: 24mm; top: 26mm; width: 16mm; height: 2mm; background: var(--laranja); }
+.parte-num {
+  margin: 0;
+  font: 700 11pt "Montserrat", sans-serif; letter-spacing: .3em; text-transform: uppercase; color: var(--laranja);
+}
+.parte-titulo {
+  margin: 4mm 0 6mm;
+  font: 900 44pt/1.02 "Montserrat", sans-serif; letter-spacing: -.03em; color: #fff;
+  max-width: 150mm;
+}
+.parte-sub { margin: 0; font: 400 14pt/1.5 "Inter", sans-serif; color: #BDBDBD; max-width: 130mm; }
+
+.contracapa .conteudo { position: absolute; inset: 30mm 24mm; display: flex; flex-direction: column; }
+.contracapa h2::before { content: none; }
+.contracapa h2 { font: 800 24pt/1.15 "Montserrat", sans-serif; margin: 0 0 8mm; color: #fff; }
+.contracapa h2 span { color: var(--laranja); }
+.contracapa p { color: #CFCFCF; font-size: 11pt; max-width: 140mm; }
+.contracapa ul { color: #EDEDED; padding-left: 0; list-style: none; }
+.contracapa li { margin: 2.5mm 0; padding-left: 8mm; position: relative; }
+.contracapa li::before { content: ""; position: absolute; left: 0; top: 2.2mm; width: 4mm; height: 1.2mm; background: var(--laranja); }
+.contracapa .rodape { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; color: #8A8A8A; font-size: 9pt; }
+
+/* ---------- Sumário ---------- */
+
+.sumario { break-before: page; }
+.sumario h1 { font: 900 32pt "Montserrat", sans-serif; margin: 0 0 8mm; letter-spacing: -.02em; }
+.sumario ol { list-style: none; padding: 0; margin: 0; columns: 1; }
+.sumario a { display: flex; align-items: baseline; gap: 3mm; color: inherit; text-decoration: none; }
+.sumario li { break-inside: avoid; }
+.toc-parte { margin-top: 4.2mm; padding-top: 2mm; border-top: 1.4px solid var(--preto); }
+.toc-parte .toc-rot { font: 800 7.5pt "Montserrat", sans-serif; letter-spacing: .2em; text-transform: uppercase; color: var(--laranja); width: 17mm; flex: none; }
+.toc-parte .toc-tit { font: 800 11pt "Montserrat", sans-serif; flex: 1; }
+.toc-cap { margin: .9mm 0; font-size: 9.6pt; }
+.toc-cap .toc-rot { font: 700 9pt "Montserrat", sans-serif; color: var(--cinza); width: 17mm; flex: none; text-align: right; padding-right: 2mm; }
+.toc-cap .toc-tit { flex: 1; display: flex; align-items: baseline; }
+.toc-cap .toc-tit::after { content: ""; flex: 1; border-bottom: 1px dotted #BDBDBD; margin: 0 2mm; transform: translateY(-1mm); }
+.toc-pg { font: 700 9.5pt "Montserrat", sans-serif; color: var(--preto); min-width: 8mm; text-align: right; }
+
+/* ---------- Capítulos ---------- */
+
+header.capitulo { break-before: page; margin-bottom: 9mm; position: relative; padding-top: 6mm; }
+header.capitulo::after { content: ""; display: block; width: 18mm; height: 1.8mm; background: var(--laranja); margin-top: 6mm; }
+.cap-eyebrow {
+  margin: 0 0 2mm;
+  font: 800 8.5pt "Montserrat", sans-serif; letter-spacing: .26em; text-transform: uppercase; color: var(--laranja);
+}
+header.capitulo h1 {
+  margin: 0;
+  font: 900 28pt/1.08 "Montserrat", sans-serif; letter-spacing: -.025em; color: var(--preto);
+  max-width: 155mm;
+}
+
+h2 {
+  font: 800 15pt/1.25 "Montserrat", sans-serif; letter-spacing: -.01em; color: var(--preto);
+  margin: 9mm 0 3mm; break-after: avoid;
+}
+h2::before { content: ""; display: inline-block; width: 2.6mm; height: 2.6mm; background: var(--laranja); margin-right: 3mm; transform: translateY(-.6mm); }
+h3 { font: 700 11.8pt/1.3 "Montserrat", sans-serif; color: var(--grafite); margin: 6mm 0 2mm; break-after: avoid; }
+h4 { font: 700 10.4pt "Montserrat", sans-serif; color: var(--laranja); margin: 4mm 0 1mm; text-transform: uppercase; letter-spacing: .06em; break-after: avoid; }
+
+p { margin: 0 0 3mm; }
+strong { color: var(--preto); font-weight: 700; }
+a { color: var(--preto); text-decoration-color: var(--laranja); }
+ul, ol { margin: 0 0 3.5mm; padding-left: 6mm; }
+li { margin: .8mm 0; }
+li::marker { color: var(--laranja); font-weight: 700; }
+hr { border: 0; border-top: 1px solid var(--linha); margin: 7mm 0; }
+
+blockquote {
+  margin: 5mm 0; padding: 1mm 0 1mm 6mm; border-left: 1.4mm solid var(--laranja);
+  font: 500 12pt/1.5 "Inter", sans-serif; color: var(--grafite);
+}
+blockquote p:last-child { margin: 0; }
+
+code { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 9pt; background: #F3F1EC; padding: .2mm 1.2mm; border-radius: 1mm; }
+
+/* ---------- Tabelas ---------- */
+
+table { width: 100%; border-collapse: collapse; margin: 4mm 0 6mm; font-size: 8.9pt; line-height: 1.45; }
+thead th {
+  background: var(--preto); color: #fff; text-align: left;
+  font: 700 8.2pt "Montserrat", sans-serif; letter-spacing: .03em;
+  padding: 2.4mm 2.6mm; border-bottom: 1mm solid var(--laranja);
+}
+td { padding: 2.2mm 2.6mm; border-bottom: 1px solid var(--linha); vertical-align: top; }
+tbody tr:nth-child(even) td { background: #FAF8F4; }
+tr { break-inside: avoid; }
+td:first-child { font-weight: 600; color: var(--preto); }
+
+/* ---------- Caixas ---------- */
+
+.callout {
+  margin: 5mm 0; padding: 4mm 5mm 1.5mm; border-radius: 2.2mm;
+  break-inside: avoid; font-size: 9.8pt;
+}
+.callout-rotulo {
+  font: 800 7.8pt "Montserrat", sans-serif; letter-spacing: .16em; text-transform: uppercase;
+  margin: 0 0 2mm !important;
+}
+.callout ul { margin-bottom: 2.5mm; }
+
+.callout.dica { background: var(--laranja-claro); border-left: 1.3mm solid var(--laranja); }
+.callout.dica .callout-rotulo { color: #B85A0B; }
+
+.callout.cuidado { background: var(--vermelho-claro); border-left: 1.3mm solid var(--vermelho); }
+.callout.cuidado .callout-rotulo { color: var(--vermelho); }
+
+.callout.framework { background: var(--preto); color: #E8E8E8; }
+.callout.framework strong { color: #fff; }
+.callout.framework .callout-rotulo { color: var(--laranja); }
+.callout.framework li::marker { color: var(--laranja); }
+
+.callout.exercicio { border: 1.4px dashed var(--grafite); background: #fff; }
+.callout.exercicio .callout-rotulo { color: var(--preto); }
+
+.callout.template { background: #F4F2EE; border: 1px solid var(--linha); }
+.callout.template .callout-rotulo { color: var(--grafite); }
+
+.callout.pratica { border: 1.6px solid var(--laranja); background: #fff; }
+.callout.pratica .callout-rotulo { color: var(--laranja); }
+
+.callout.resumo, .callout.aplicar { background: var(--preto-2); color: #E6E6E6; }
+.callout.resumo strong, .callout.aplicar strong { color: #fff; }
+.callout.resumo .callout-rotulo, .callout.aplicar .callout-rotulo { color: var(--laranja); }
+.callout.aplicar { border-top: 1.4mm solid var(--laranja); border-radius: 0 0 2.2mm 2.2mm; }
+
+.callout.destaque {
+  background: var(--preto); color: #fff; padding: 7mm 9mm 5mm; border-radius: 0;
+  border-left: 2.4mm solid var(--laranja);
+  font: 700 13.5pt/1.4 "Montserrat", sans-serif; letter-spacing: -.005em;
+}
+.callout.destaque strong { color: var(--laranja); }
+.callout.destaque .callout-rotulo { color: var(--laranja); font-size: 7.5pt; }
+
+/* ---------- Conversas estilo WhatsApp ---------- */
+
+.comparar { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; align-items: start; margin: 5mm 0; }
+.comparar .wa { margin: 0; width: auto; }
+
+figure.wa { margin: 5mm auto; width: 108mm; break-inside: avoid; }
+.wa-rotulo {
+  display: inline-block; font: 800 7.6pt "Montserrat", sans-serif; letter-spacing: .14em; text-transform: uppercase;
+  padding: 1.2mm 3mm; border-radius: 10mm; margin-bottom: 2mm; color: #fff; background: var(--grafite);
+}
+.wa.nao .wa-rotulo { background: var(--vermelho); }
+.wa.sim .wa-rotulo { background: var(--verde); }
+
+.wa-tela { border-radius: 3.5mm; overflow: hidden; border: 1px solid #D8D2C8; box-shadow: 0 1mm 3mm rgba(0,0,0,.08); }
+.wa.nao .wa-tela { border-color: #E8B4B4; }
+.wa.sim .wa-tela { border-color: #A9D9BC; }
+
+.wa-topo { background: var(--wa-topo); color: #fff; display: flex; align-items: center; gap: 2.4mm; padding: 2.2mm 3mm; }
+.wa-avatar {
+  width: 6.4mm; height: 6.4mm; border-radius: 50%; background: var(--laranja); color: var(--preto);
+  display: inline-flex; align-items: center; justify-content: center; font: 800 8pt "Montserrat", sans-serif; flex: none;
+}
+.wa-contato { font: 600 8.6pt "Inter", sans-serif; flex: 1; line-height: 1.2; }
+.wa-online { font-size: 6.8pt; color: #9FB3BC; }
+
+.wa-corpo {
+  background: var(--wa-fundo);
+  background-image: radial-gradient(rgba(0,0,0,.035) 1px, transparent 1.2px);
+  background-size: 3mm 3mm;
+  padding: 3mm 2.6mm 2mm; display: flex; flex-direction: column; gap: 1.4mm;
+}
+.wa-msg {
+  max-width: 84%; padding: 1.6mm 2.4mm 1.2mm; border-radius: 2mm; font-size: 8.5pt; line-height: 1.42;
+  box-shadow: 0 .3mm .4mm rgba(0,0,0,.1); position: relative; hyphens: manual; overflow-wrap: anywhere;
+}
+.wa-msg.in { align-self: flex-start; background: #fff; border-top-left-radius: .4mm; }
+.wa-msg.out { align-self: flex-end; background: var(--wa-out); border-top-right-radius: .4mm; }
+.wa-meta { float: right; margin: 1.2mm 0 -0.6mm 2.6mm; font-size: 6.3pt; color: #8A9095; white-space: nowrap; line-height: 1.5; }
+.wa-check { color: #34B7F1; margin-left: .7mm; letter-spacing: -.12em; font-weight: 700; }
+.wa-sistema {
+  align-self: center; background: #E1F3FB; color: #54656F; font-size: 6.9pt; padding: .8mm 2.6mm;
+  border-radius: 1.4mm; text-transform: uppercase; letter-spacing: .04em; margin: .8mm 0;
+}
+.wa-audio { display: flex; align-items: center; gap: 2mm; min-width: 42mm; padding-top: .6mm; }
+.wa-play { color: #54656F; font-size: 9pt; }
+.wa-onda { display: flex; align-items: center; gap: .45mm; height: 5mm; flex: 1; }
+.wa-onda i { display: block; width: .6mm; background: #7C8B92; border-radius: .3mm; }
+.wa-msg.out .wa-onda i { background: #5E9C5A; }
+.wa-dur { font-size: 6.8pt; color: #667781; }
+.wa-transc { font-size: 7.6pt; color: #54656F; font-style: italic; margin-top: 1mm; border-top: 1px dashed rgba(0,0,0,.12); padding-top: 1mm; }
+.wa-anexo { display: flex; gap: 2mm; align-items: center; background: rgba(0,0,0,.05); padding: 1.6mm 2mm; border-radius: 1.4mm; font-weight: 600; }
+.wa-anexo span { font-size: 11pt; }
+
+.wa-nota { margin-top: 2.2mm; font-size: 8.4pt; line-height: 1.45; color: var(--grafite); padding-left: 3mm; border-left: .8mm solid var(--grafite); }
+.wa.nao .wa-nota { border-color: var(--vermelho); }
+.wa.sim .wa-nota { border-color: var(--verde); }
+
+/* ---------- Anexos: formulários ---------- */
+
+.formulario td { height: 9mm; }
+.linhas-escrita { border-bottom: 1px solid #BDBDBD; height: 8mm; }
+td:empty { height: 9mm; }
+.campo { display: inline-block; width: 46mm; border-bottom: 1px solid #9A9A9A; height: 4mm; margin: 0 2mm 0 1mm; }
+.campo.curto { width: 24mm; }
