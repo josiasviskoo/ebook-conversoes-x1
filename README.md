@@ -20,3 +20,14 @@ Sintaxe especial nos capítulos:
 - Lado a lado: `::::comparar` … `::::`
 - Caixas: `:::dica`, `:::cuidado`, `:::framework`, `:::exercicio`, `:::template`, `:::pratica`, `:::resumo`, `:::aplicar`, `:::destaque` … `:::`
 - Abertura de parte: `<!-- PARTE: 1 | Título | Subtítulo -->`
+
+### Versão impressa (gráfica)
+
+- Gabarito e especificações: `Editora/` (140x210 mm, 64 p., miolo 1x1 sulfite 75g, capa colorida com orelhas, lombada 4 mm)
+- Conteúdo condensado: `ebook/producao/capitulos/*.md`; capa aberta: `ebook/producao/capa.html`; estilo: `ebook/producao/miolo.css`
+- PDF de produção: `SAIDA/metodo-x1-producao-140x210-64p.pdf` (pág. 1 = capa aberta CMYK, págs. 2-65 = miolo em escala de cinza)
+
+```bash
+pip install markdown pymupdf   # + Google Chrome, Ghostscript e poppler-utils
+python3 ebook/producao/build_producao.py
+```

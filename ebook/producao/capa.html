@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Método X1: capa aberta</title>
+<!--FONTES-->
+<style>
+/* Capa aberta conforme gabarito: 554 x 216 mm com 3 mm de sangria.
+   x (mm): 0-3 sangria | 3-133 orelha (4ª capa) | 133-275 4ª capa | 275-279 lombada 4 mm |
+           279-421 1ª capa | 421-551 orelha (1ª capa) | 551-554 sangria
+   Áreas de segurança: orelhas 8-128 e 426-546; 4ª capa 138-263; 1ª capa 291-416;
+   lombada: faixa central 276,5-277,5; y 8-208 em tudo. */
+@page { size: 554mm 216mm; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+:root { --preto: #000000; --preto-2: #000000; --laranja: #F58220; --texto: #CFCFCF; --apagado: #8A8A8A; --fio: #333; }
+body { width: 554mm; height: 216mm; position: relative; overflow: hidden; background: var(--preto);
+  color: #fff; font-family: "Inter", sans-serif; }
+.painel { position: absolute; top: 0; height: 216mm; overflow: hidden; }
+.seguro { position: absolute; top: 8mm; bottom: 8mm; display: flex; flex-direction: column; }
+
+.orelha-e { left: 0; width: 133mm; background: var(--preto-2); }
+.orelha-e .seguro { left: 13mm; right: 10mm; padding: 6mm 3mm 5mm; }
+.quarta { left: 133mm; width: 142mm; }
+.quarta .seguro { left: 10mm; right: 17mm; padding: 8mm 4mm 5mm; }
+.lombada { left: 275mm; width: 4mm; background: var(--preto); }
+.capa { left: 279mm; width: 142mm; }
+.capa .seguro { left: 17mm; right: 10mm; padding: 6mm 4mm 5mm; }
+.orelha-d { left: 421mm; width: 133mm; background: var(--preto-2); }
+.orelha-d .seguro { left: 10mm; right: 13mm; padding: 6mm 3mm 5mm; }
+
+.icone svg { width: 100%; height: 100%; display: block; }
+.marca { display: flex; flex-direction: column; align-items: flex-end; gap: 1.6mm; }
+.marca svg { display: block; height: 6.2mm; width: auto; }
+.site { font: 600 6.6pt "Montserrat", sans-serif; letter-spacing: .12em; color: var(--laranja); line-height: 1; }
+.rotulo { font: 800 6.2pt "Montserrat", sans-serif; letter-spacing: .26em; text-transform: uppercase; color: var(--laranja); margin: 0; }
+.fio-laranja { width: 12mm; height: 1.2mm; background: var(--laranja); }
+
+/* ---------- 1ª capa ---------- */
+.capa .x-gigante { position: absolute; right: -24mm; top: 40mm; font: 900 240pt/0.8 "Montserrat", sans-serif;
+  color: rgba(245,130,32,.08); letter-spacing: -.06em; }
+.capa .faixa { position: absolute; left: 17mm; top: 0; width: 18mm; height: 2.4mm; background: var(--laranja); }
+.capa .icone { position: absolute; right: 14mm; top: 14mm; width: 10mm; height: 10mm; }
+.selo { font: 700 6.6pt "Montserrat", sans-serif; letter-spacing: .26em; text-transform: uppercase; color: var(--laranja); margin: 8mm 0 0; line-height: 1.7; position: relative; z-index: 2; }
+.metodo { position: relative; z-index: 2; margin-top: 12mm; font: 800 15pt/1 "Montserrat", sans-serif; letter-spacing: .02em; color: #fff; }
+.metodo span { color: var(--laranja); }
+.titulo-capa { position: relative; z-index: 2; margin: 2.5mm 0 0; font: 900 50pt/0.92 "Montserrat", sans-serif; letter-spacing: -.035em; color: #fff; }
+.titulo-capa span { color: var(--laranja); }
+.capa .barra { position: relative; z-index: 2; width: 16mm; height: 1.8mm; background: var(--laranja); margin: 7mm 0 5mm; }
+.descricao { position: relative; z-index: 2; font: 400 8.6pt/1.5 "Inter", sans-serif; color: var(--texto); max-width: 50mm; margin: 0; }
+.foto-capa { position: absolute; z-index: 1; right: -12mm; bottom: -3mm; width: 112mm; height: auto; display: block; }
+.capa .rodape { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; gap: 6mm;
+  padding-top: 4mm; position: relative; z-index: 2; }
+.autor-capa { margin: 0 0 1.4mm; font: 700 8.4pt "Montserrat", sans-serif; letter-spacing: .2em; text-transform: uppercase; color: #fff; }
+.publico { font: 500 6.8pt/1.5 "Inter", sans-serif; color: #9A9A9A; max-width: 84mm; margin: 0; }
+
+/* ---------- 4ª capa ---------- */
+.quarta .x-gigante { position: absolute; left: -20mm; bottom: -14mm; font: 900 200pt/0.8 "Montserrat", sans-serif;
+  color: rgba(245,130,32,.06); letter-spacing: -.06em; }
+.quarta .seguro > * { position: relative; }
+.quarta h2 { font: 800 18pt/1.18 "Montserrat", sans-serif; margin: 0 0 5mm; letter-spacing: -.01em; }
+.quarta h2 span { color: var(--laranja); }
+.quarta .chamada { color: var(--texto); font-size: 8.8pt; line-height: 1.6; margin: 0 0 7mm; }
+.quarta .rotulo { margin-bottom: 2.5mm; }
+.quarta ul { list-style: none; padding: 0; margin: 0; color: #EDEDED; font-size: 8.3pt; line-height: 1.4; }
+.quarta li { padding: 2.1mm 0 2.1mm 6mm; position: relative; border-bottom: .2mm solid #1F1F1F; }
+.quarta li::before { content: ""; position: absolute; left: 0; top: 3.6mm; width: 3.2mm; height: 1mm; background: var(--laranja); }
+.quarta .frase { margin: auto 0 0; padding: 5mm 0 5mm 4mm; border-left: 1.2mm solid var(--laranja);
+  font: 700 9.6pt/1.4 "Montserrat", sans-serif; color: #fff; }
+.quarta .rodape { margin-top: 6mm; display: flex; justify-content: space-between; align-items: flex-end;
+  color: var(--apagado); font-size: 6.6pt; padding-top: 4mm; border-top: .25mm solid #2A2A2A; }
+
+/* ---------- Lombada (texto de cima para baixo, centrado na faixa de segurança) ---------- */
+.lombada .texto { position: absolute; left: 2mm; top: 108mm; width: 180mm; height: 4mm; margin: 0;
+  transform: translate(-50%, -50%) rotate(90deg); display: flex; align-items: center; justify-content: space-between;
+  white-space: nowrap; line-height: 1; }
+.lombada .titulo { font: 900 6pt "Montserrat", sans-serif; letter-spacing: .06em; text-transform: uppercase; color: #fff; }
+.lombada .titulo span { color: var(--laranja); }
+.lombada .l-autor { font: 600 5.4pt "Montserrat", sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #BDBDBD; }
+.lombada .selo-l svg { display: block; height: 2.1mm; width: auto; }
+
+/* ---------- Orelhas ---------- */
+.orelha h4 { font: 800 15pt/1.18 "Montserrat", sans-serif; margin: 2.5mm 0 4mm; color: #fff; }
+.orelha p { font-size: 7.8pt; line-height: 1.55; color: var(--texto); margin: 0 0 3mm; }
+.consulta { list-style: none; margin: 0; padding: 0; }
+.consulta li { display: flex; align-items: baseline; gap: 2mm; padding: 2.6mm 0; border-bottom: .2mm solid var(--fio); font-size: 8pt; color: #DADADA; line-height: 1.3; }
+.consulta li span { flex: 1; }
+.consulta li em { font: 800 8.2pt "Montserrat", sans-serif; font-style: normal; color: var(--laranja); white-space: nowrap; }
+
+.autor { margin-top: auto; padding-top: 4.5mm; border-top: .25mm solid #2E2E2E; display: flex; gap: 4mm; align-items: flex-start; }
+.autor img { width: 21mm; height: 21mm; border-radius: 50%; object-fit: cover; flex: none;
+  box-shadow: 0 0 0 .5mm var(--preto-2), 0 0 0 .8mm rgba(245,130,32,.75); }
+.autor .rotulo { color: var(--apagado); font-size: 5.6pt; margin-bottom: 1mm; }
+.autor-nome { font: 800 9.6pt "Montserrat", sans-serif; color: #fff; margin: 0 0 1.4mm; }
+.autor-bio { font-size: 6.7pt !important; line-height: 1.5 !important; color: #A6A6A6 !important; margin: 0 !important; text-align: justify; hyphens: auto; }
+
+.etapas { list-style: none; margin: 0; padding: 0; }
+.etapas li { display: flex; gap: 3mm; align-items: baseline; padding: 3.1mm 0; border-bottom: .2mm solid var(--fio); font-size: 7.8pt; color: var(--texto); line-height: 1.35; }
+.etapas b { font: 900 13pt/1 "Montserrat", sans-serif; color: var(--laranja); width: 6mm; flex: none; }
+.etapas strong { color: #fff; }
+.para-quem { margin-top: auto; padding-top: 4.5mm; border-top: .25mm solid #2E2E2E; }
+.para-quem .rotulo { color: var(--apagado); font-size: 5.6pt; margin-bottom: 1.4mm; }
+.para-quem p { font-size: 7.2pt; color: #A6A6A6; margin: 0; }
+.orelha-d .rodape-orelha { display: flex; justify-content: space-between; align-items: center; margin-top: 4mm; }
+.orelha-d .icone { width: 7mm; height: 7mm; }
+.orelha-d .marca svg { height: 4.4mm; }
+</style></head>
+<body>
+
+<!-- ORELHA ESQUERDA: consulta rápida + sobre o autor -->
+<section class="painel orelha orelha-e">
+  <div class="seguro">
+    <p class="rotulo">Consulta rápida</p>
+    <h4>Aconteceu na conversa?<br>Vá direto à página.</h4>
+    <ul class="consulta">
+      <li><span>O lead perguntou “quanto custa?” logo de cara</span><em>p. <!--PG:c-preço-quando-como-e-por-qual-canal--></em></li>
+      <li><span>O cliente mandou um áudio, ou um textão</span><em>p. <!--PG:c-a-regra-do-espelho--></em></li>
+      <li><span>Vou chamar quem preencheu o formulário do anúncio</span><em>p. <!--PG:c-a-primeira-mensagem--></em></li>
+      <li><span>“Isso é robô?”: o cliente desconfia</span><em>p. <!--PG:c-apresentação-e-prova-de-pessoa-real--></em></li>
+      <li><span>“Tá caro”, “vou pensar”, “vou falar com meu sócio”</span><em>p. <!--PG:c-as-10-objeções-mais-comuns--></em></li>
+      <li><span>Ele perguntou do PIX: é hora de fechar</span><em>p. <!--PG:c-técnicas-de-fechamento--></em></li>
+      <li><span>Muitas dúvidas: hora de ligar?</span><em>p. <!--PG:c-quando-sair-do-whatsapp--></em></li>
+      <li><span>Visualizou e sumiu</span><em>p. <!--PG:c-follow-up-sem-ser-chato--></em></li>
+      <li><span>Vou treinar o time em 30 dias</span><em>p. <!--PG:c-plano-de-treinamento-de-30-dias--></em></li>
+    </ul>
+    <div class="autor">
+      <img src="<!--FOTO-->" alt="Josias Viskoo">
+      <div>
+        <p class="rotulo">Sobre o autor</p>
+        <p class="autor-nome">Josias Viskoo</p>
+        <p class="autor-bio">Designer, programador e estrategista digital com mais de 15 anos de experiência. Lecionou na Microlins e na Microcamp e atendeu marcas como Johnson &amp; Johnson, Álcool Safra e Sicoob. Hoje lidera a Viskoo, sediada no ONOVOLAB, em São Carlos (SP), criando estruturas digitais que ajudam empresas a vender mais.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4ª CAPA -->
+<section class="painel quarta">
+  <div class="x-gigante">X1</div>
+  <div class="seguro">
+    <h2>Seu cliente não quer falar com um script.<br><span>Quer falar com alguém.</span></h2>
+    <p class="chamada">Cada lead que chega do anúncio custou dinheiro. O Método X1 ensina o time comercial a atender esse lead no WhatsApp como gente de verdade e aproveitar cada conversão, com método repetível, mensurável e que melhora a cada semana.</p>
+    <p class="rotulo">Neste livro</p>
+    <ul>
+      <li>As 8 etapas do Método X1, do primeiro “oi” ao pós-venda</li>
+      <li>A Regra do Espelho: áudio com áudio, curto com curto</li>
+      <li>Desrobotização e provas de que você é uma pessoa real</li>
+      <li>SPIN, BANT, GPCT e AIDA adaptados para o chat</li>
+      <li>7 perfis de cliente, do mais simples ao mais sofisticado</li>
+      <li>A hora e o canal certos para o preço</li>
+      <li>Objeções, fechamento e follow-up que não incomoda</li>
+      <li>Playbook, scorecard e plano de treinamento de 30 dias</li>
+    </ul>
+    <p class="frase">O anúncio traz o cliente até a porta.<br>Quem abre a porta é você, no X1.</p>
+    <div class="rodape"><span>© 2026 Josias Viskoo · Viskoo · Todos os direitos reservados</span><div class="marca"><!--LOGO--><span class="site">.com.br</span></div></div>
+  </div>
+</section>
+
+<!-- LOMBADA -->
+<section class="painel lombada">
+  <p class="texto"><span class="titulo">Método <span>X1</span> · Vendas no 1 a 1</span><span class="l-autor">Josias Viskoo</span><span class="selo-l"><!--LOGO--></span></p>
+</section>
+
+<!-- 1ª CAPA -->
+<section class="painel capa">
+  <div class="faixa"></div>
+  <div class="x-gigante">X1</div>
+  <div class="icone"><!--ICONE--></div>
+  <img class="foto-capa" src="<!--FOTOCAPA-->" alt="Josias Viskoo">
+  <div class="seguro">
+    <p class="selo">Guia do atendimento comercial<br>Leads do tráfego pago</p>
+    <div class="metodo">Método <span>X1</span></div>
+    <h1 class="titulo-capa">Vendas<br>no <span>1 a 1</span></h1>
+    <div class="barra"></div>
+    <p class="descricao">Como atender no X1 os leads que chegam dos anúncios: abordagem, descoberta, a hora certa do preço e playbook para transformar conversas de WhatsApp em vendas fechadas.</p>
+    <div class="rodape">
+      <div>
+        <p class="autor-capa">Josias Viskoo</p>
+        <p class="publico">Para quem atende, vende e lidera no WhatsApp<br>Vendas B2B e B2C</p>
+      </div>
+      <div class="marca"><!--LOGO--><span class="site">.com.br</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ORELHA DIREITA: o método -->
+<section class="painel orelha orelha-d">
+  <div class="seguro">
+    <p class="rotulo">O método</p>
+    <h4>Toda venda no WhatsApp é uma CONVERSA.</h4>
+    <p>As 8 etapas do Método X1 formam a palavra que resume tudo. Se a venda virar monólogo, apresentação ou interrogatório, alguma etapa ficou para trás.</p>
+    <ul class="etapas">
+      <li><b>C</b><span><strong>Conectar</strong>: sintonia e prova de que você é gente</span></li>
+      <li><b>O</b><span><strong>Ouvir</strong>: situação, problema, impacto e decisão</span></li>
+      <li><b>N</b><span><strong>Nomear a dor</strong>: com as palavras do cliente</span></li>
+      <li><b>V</b><span><strong>Valor</strong>: a solução ligada à dor</span></li>
+      <li><b>E</b><span><strong>Evidência</strong>: casos, números, demonstração</span></li>
+      <li><b>R</b><span><strong>Resolver objeções</strong>: acolher, perguntar, responder</span></li>
+      <li><b>S</b><span><strong>Sinalizar o próximo passo</strong>: sempre com data</span></li>
+      <li><b>A</b><span><strong>Acompanhar</strong>: follow-up e pós-venda</span></li>
+    </ul>
+    <div class="para-quem">
+      <p class="rotulo">Para quem é</p>
+      <p>Atendentes, vendedores e líderes do comercial que recebem no WhatsApp os leads do tráfego pago, em vendas B2B e B2C.</p>
+      <div class="rodape-orelha"><div class="icone"><!--ICONE--></div><div class="marca"><!--LOGO--><span class="site">.com.br</span></div></div>
+    </div>
+  </div>
+</section>
+
+</body></html>
